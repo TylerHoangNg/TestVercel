@@ -1,16 +1,6 @@
 <script>
 	import { page } from "$app/stores";
 	import logo from "./Horizan-animation.svg";
-
-	import { user } from "$lib/stores";
-	let isActive = false;
-	async function logout() {
-		await axios.post("/api/auth/logout");
-		$user = null;
-		// $transactions = [];
-		push("/");
-		location.reload();
-	}
 </script>
 
 <svelte:head>
@@ -41,8 +31,6 @@
 					<span
 						class="nav"
 						style="display: block;"
-						class:is-active={isActive}
-						on:click={() => (isActive = !isActive)}
 						aria-expanded="false"
 						aria-label="menu"
 					>
@@ -63,22 +51,7 @@
 						</li>
 						<li>
 						  <div class="gradient-button">
-							{#if $user}
-							  <a class="buton is-primary-is-light fa fa-user" href="/profile">
-								&nbsp;&nbsp;{$user.name}
-							  </a>
-							  <a
-								href="#/rungame"
-								class="buton is-primary-is-light">Start <i class="fas fa-play"/></a
-							  >
-							  <a
-								href="/#"
-								class="buton is-primary-is-light"
-								on:click={logout}>Log out <i class="fas fa-sign-out-alt"></i> </a
-							  >
-							{:else}
 							  <a class="buton is-primary-is-light" href="/login"> <i class="fa fa-sign-out" aria-hidden="true"></i> Login <i class="fas fa-sign-in-alt"/></a>
-							{/if}
 						  </div>
 						</li>
 					  </ul>

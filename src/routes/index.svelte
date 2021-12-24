@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { user } from "$lib/stores";
+  import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
@@ -37,12 +37,6 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
-                      {#if $user}
-                        <a href="#/rungame" class="btn-first">
-                          &nbsp;Start
-                          <i class="fas fa-play" />
-                        </a>
-                      {:else}
                         <a class="btn-first" href="/login">
                           <i
                             class="fa fa-sign-out"
@@ -50,7 +44,6 @@
                             &nbsp;Start&nbsp;
                             <i class="fas fa-play" />
                         </a>
-                      {/if}
                     </div>
                   </div>
                 </div>
