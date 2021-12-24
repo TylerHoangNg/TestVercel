@@ -1,103 +1,70 @@
 <script>
-	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import { page } from "$app/stores";
+	import logo from "./Horizan-animation.svg";
+	}
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="stylesheet"
+		href="/chain-1.0.0/assets/css/templatemo-chain-app-dev.css"
+	/>
+</svelte:head>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
-			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+<header
+	class="header-area header-sticky wow slideInDown"
+	data-wow-duration="0.75s"
+	data-wow-delay="0s"
+>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<nav class="main-nav">
+					<a href="index.html" class="logo">
+						<img src={logo} alt="Horizan App" />
+					</a>
+					<span
+						class="nav"
+						style="display: block;"
+						aria-expanded="false"
+						aria-label="menu"
+					>
+						<span aria-hidden="true" />
+						<span aria-hidden="true" />
+						<span aria-hidden="true" />
+					</span>
+					<!-- ***** Menu ***** -->
+					<ul class="nav">
+						<li class="scroll-to-section">
+						  <a class="button" class:active={$page.path === '/'} sveltekit:prefetch href="/"><i class="fas fa-home"/>Home</a>
+						</li>
+						<li class="scroll-to-section">
+						  <a class="button" class:active={$page.path === '/about'} sveltekit:prefetch href="/about">About</a>
+						</li>
+						<li class="scroll-to-section">
+						  <a class="button" class:active={$page.path === '/todos'} sveltekit:prefetch href="todos">Todos</a>
+						</li>
+						<li>
+						  <div class="gradient-button">
+							  <a class="buton is-primary-is-light" href="/"> <i class="fa fa-sign-out" aria-hidden="true"></i> Login <i class="fas fa-sign-in-alt"/></a>
+						  </div>
+						</li>
+					  </ul>
+				</nav>
+			</div>
+		</div>
 	</div>
 </header>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li.active::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
+	img {
+		width: 165px;
 	}
 
 	nav a {
