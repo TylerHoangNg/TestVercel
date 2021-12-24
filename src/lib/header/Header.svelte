@@ -1,6 +1,6 @@
 <script>
 	import { page } from "$app/stores";
-	import logo from "Horizan-animation.svg";
+	import logo from "./Horizan-animation.svg";
 
 	import { user } from "$lib/stores";
 	let isActive = false;
