@@ -1,7 +1,6 @@
 <script>
 	import { page } from "$app/stores";
 	import logo from "./Horizan-animation.svg";
-	}
 </script>
 
 <svelte:head>
