@@ -29,32 +29,32 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#/">Maintance Problems</a></h4>
+                <h4><a href="/">Maintance Problems</a></h4>
                 <p>Lorem Ipsum Text</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#/">24/7 Support &amp; Help</a></h4>
+                <h4><a href="/">24/7 Support &amp; Help</a></h4>
                 <p>Lorem Ipsum Text</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#/">Fixing Issues About</a></h4>
+                <h4><a href="/">Fixing Issues About</a></h4>
                 <p>Lorem Ipsum Text</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#/">Co. Development</a></h4>
+                <h4><a href="/">Co. Development</a></h4>
                 <p>Lorem Ipsum Text</p>
               </div>
             </div>
             <div class="col-lg-12">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor idunte ut labore et dolore adipiscing  magna.</p>
               <div class="gradient-button">
-                <a href="#/">Start 14-Day Free Trial</a>
+                <a href="/">Start 14-Day Free Trial</a>
               </div>
               <span>*No Credit Card Required</span>
             </div>
