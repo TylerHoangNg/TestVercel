@@ -12,7 +12,7 @@
   />
   <link
     rel="stylesheet"
-    href="/static/chain-1.0.0/assets/css/templatemo-chain-app-dev.css"
+    href="/chain-1.0.0/assets/css/templatemo-chain-app-dev.css"
   />
 </svelte:head>
 
