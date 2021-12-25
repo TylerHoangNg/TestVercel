@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-12">
 				<nav class="main-nav">
-					<a href="index.html" class="logo">
+					<a href="/" class="logo">
 						<img src={logo} alt="Horizan App" />
 					</a>
 					<span
@@ -39,7 +39,7 @@
 						<span aria-hidden="true" />
 					</span>
 					<!-- ***** Menu ***** -->
-					<!-- <ul class="nav">
+					<ul class="nav">
 						<li class="scroll-to-section">
 						  <a class="button" class:active={$page.path === '/'} sveltekit:prefetch href="/"><i class="fas fa-home"/>Home</a>
 						</li>
@@ -54,7 +54,7 @@
 							  <a class="buton is-primary-is-light" href="/"> <i class="fa fa-sign-out" aria-hidden="true"></i> Login <i class="fas fa-sign-in-alt"/></a>
 						  </div>
 						</li>
-					</ul> -->
+					</ul>
 				</nav>
 			</div>
 		</div>
