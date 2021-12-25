@@ -54,7 +54,7 @@
 							  <a class="buton is-primary-is-light" href="/"> <i class="fa fa-sign-out" aria-hidden="true"></i> Login <i class="fas fa-sign-in-alt"/></a>
 						  </div>
 						</li>
-					  </ul>
+					</ul>
 				</nav>
 			</div>
 		</div>
