@@ -5,6 +5,7 @@
 <script>
   import supabase from "$lib/db";
   const user = supabase.auth.user();
+  location.reload();
 </script>
 
 <svelte:head>

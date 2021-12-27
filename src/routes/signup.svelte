@@ -20,6 +20,11 @@
       goto("/checkmail");
       location.reload();
   }
+  async function signInGoogle(){
+    const supabase = createClient('https://pyprvuluxogjtjqfmmjr.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MDQwNjA1MiwiZXhwIjoxOTU1OTgyMDUyfQ.I1zzXgootPcEQYTMxTyhCP-nAFu2bBNgxTB8K0mvXwk');
+    supabase.auth.signIn({provider: 'google'}, goto('/'));
+  }
 </script>
 
 <svelte:head>
@@ -107,7 +112,7 @@
               <i class="fab fa-facebook-f" />
             </button>
 
-            <button type="button" class="btn btn-primary btn-floating mx-1">
+            <button type="button" class="btn btn-primary btn-floating mx-1" on:click={signInGoogle}>
               <i class="fab fa-google" />
             </button>
 
