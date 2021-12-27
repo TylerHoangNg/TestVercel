@@ -1,6 +1,13 @@
 <script>
 	import { page } from "$app/stores";
 	import logo from "./Horizan-animation.svg";
+
+	import supabase from "$lib/db";
+
+	const user = supabase.auth.user();
+	async function signOut(){
+		const { error } = await supabase.auth.signOut();
+	};
 </script>
 
 <svelte:head>
@@ -46,14 +53,19 @@
 						<li class="scroll-to-section">
 						  <a class="button" class:active={$page.path === '/about'} sveltekit:prefetch href="/about">About</a>
 						</li>
-						<li class="scroll-to-section">
-						  <a class="button" class:active={$page.path === '/todos'} sveltekit:prefetch href="todos">Todos</a>
-						</li>
+						{#if user}
+						<li>
+							<div class="gradient-button">
+								<a class="buton is-primary-is-light" href="/" on:click={signOut}> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout <i class="fas fa-sign-in-alt"/></a>
+							</div>
+						  </li>
+						{:else}
 						<li>
 						  <div class="gradient-button">
-							  <a class="buton is-primary-is-light" href="/"> <i class="fa fa-sign-out" aria-hidden="true"></i> Login <i class="fas fa-sign-in-alt"/></a>
+							  <a class="buton is-primary-is-light" href="/signin"> <i class="fa fa-sign-out" aria-hidden="true"></i> Login <i class="fas fa-sign-in-alt"/></a>
 						  </div>
 						</li>
+						{/if}
 					</ul>
 				</nav>
 			</div>
