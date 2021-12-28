@@ -7,6 +7,7 @@
 	const user = supabase.auth.user();
 	async function signOut(){
 		const { error } = await supabase.auth.signOut();
+      	location.reload();
 	};
 </script>
 

@@ -38,7 +38,7 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
-                      {#if $user}
+                      {#if user}
                       <a class="btn-first" href="/">
                         <i class="fa fa-sign-out" aria-hidden="true" />
                         &nbsp;Start&nbsp;

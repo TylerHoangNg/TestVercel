@@ -16,6 +16,7 @@
       goto("/");
       location.reload();
   }
+
 </script>
 
 <svelte:head>
