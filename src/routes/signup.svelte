@@ -20,11 +20,6 @@
       goto("/checkmail");
       location.reload();
   }
-  async function signInGoogle(){
-    const supabase = createClient('https://pyprvuluxogjtjqfmmjr.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MDQwNjA1MiwiZXhwIjoxOTU1OTgyMDUyfQ.I1zzXgootPcEQYTMxTyhCP-nAFu2bBNgxTB8K0mvXwk');
-    supabase.auth.signIn({provider: 'google'}, goto('/'));
-  }
 </script>
 
 <svelte:head>
@@ -102,27 +97,9 @@
               </div>
             </form>
             <p class="text-center text-muted mt-4 mb-0">
-              Have already an account? <a
-                href="/signin"
-                class="fw-bold text-body"><u>Login here</u></a
-              >
+              Have already an account? 
+              <a href="/signin">Login here</a>
             </p>
-            <p>or sign up with:</p>
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-facebook-f" />
-            </button>
-
-            <button type="button" class="btn btn-primary btn-floating mx-1" on:click={signInGoogle}>
-              <i class="fab fa-google" />
-            </button>
-
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-twitter" />
-            </button>
-
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-github" />
-            </button>
           </div>
         </div>
       </div>

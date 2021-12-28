@@ -4,7 +4,6 @@
   import supabase from "$lib/db";
   import {goto} from '$app/navigation';
 
-  import { createClient } from "@supabase/supabase-js";
   let email, password;
 
   async function signIn(){
@@ -16,12 +15,6 @@
       $session = sesh;
       goto("/");
       location.reload();
-  }
-
-  async function signInGoogle(){
-    const supabase = createClient('https://pyprvuluxogjtjqfmmjr.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MDQwNjA1MiwiZXhwIjoxOTU1OTgyMDUyfQ.I1zzXgootPcEQYTMxTyhCP-nAFu2bBNgxTB8K0mvXwk');
-    supabase.auth.signIn({provider: 'google'}, goto('/'));
   }
 </script>
 
@@ -95,22 +88,6 @@
                 Do not have an account ?
                 <a href="/signup">Sign Up</a>
               </p>
-              <p>or sign up with:</p>
-              <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-facebook-f" />
-              </button>
-  
-              <button type="button" class="btn btn-primary btn-floating mx-1" on:click={signInGoogle}>
-                <i class="fab fa-google" />
-              </button>
-  
-              <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-twitter" />
-              </button>
-  
-              <button type="button" class="btn btn-primary btn-floating mx-1">
-                <i class="fab fa-github" />
-              </button>
             </div>
           </div>
         </div>
