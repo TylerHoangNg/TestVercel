@@ -53,10 +53,6 @@
             </div>
             <div class="col-lg-12">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor idunte ut labore et dolore adipiscing  magna.</p>
-              <div class="gradient-button">
-                <a href="/">Start 14-Day Free Trial</a>
-              </div>
-              <span>*No Credit Card Required</span>
             </div>
           </div>
         </div>
